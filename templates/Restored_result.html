@@ -6,9 +6,6 @@
 </head>
 <body>
     <h1>하이</h1>
-    {{content}}
-    <form action="/Delete",mothod='post'>
-        <button type="submit">내용 모두 지우기</button>
-    </form>
+    {{content|safe}}
 </body>
 </html>

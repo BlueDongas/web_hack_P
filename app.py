@@ -10,7 +10,7 @@ def main():
 def Reflected_result():
     result = request.args.get("Script_Input")
 
-    return result #render_template('Reflected_result.html',result=result)
+    return render_template('Reflected_result.html',result=result)
 
 @app.route("/Restored_result",methods=['POST'])
 def Restored_result():
@@ -23,12 +23,12 @@ def Restored_result():
     
     return render_template('Restored_result.html',content=content)
 
-@app.route("/Delete",methods=['POST'])
-def Delete_file():
-    f=open('content.txt','w')
-    f.write("")
-    f.close()
-    return render_template("Restored_result.html")
+#@app.route("/Delete",methods=['POST'])
+#def Delete_file():
+#    f=open('content.txt','w')
+#    f.write("")
+#    f.close()
+#    return render_template("Delete.html")
 
 if __name__ == "__main__":
     app.run('0.0.0.0',port=3000,debug=True)
