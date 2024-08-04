@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input[type=text] {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <title>XSS</title>
+</head>
+<body>
+    <h2>Reflected XSS</h2>
+    <form action="/Reflected_result" method="get">
+        <label>입력:</label><br>
+        <input type="text" id="Script_Input" name="Script_Input"><br><br>
+        <button type="submit">제출</button>
+    </form>
+    <br>
+    <h2> Stored XSS</h2>
+    <form action="/Restored_result" method="post">
+        <label>입력:</label><br>
+        <input type="text" id="Script_Input2" name="Script_Input2"><br><br>
+        <button type="submit">제출</button>
+    </form>
+</body>
+</html>
