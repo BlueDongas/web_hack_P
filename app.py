@@ -28,7 +28,7 @@ def Delete_file():
     f=open('content.txt','w')
     f.write("")
     f.close()
-    return render_template("Restored.html")
+    return render_template("Restored_result.html")
 
 if __name__ == "__main__":
     app.run('0.0.0.0',port=3000,debug=True)
